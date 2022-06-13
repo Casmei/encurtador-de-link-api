@@ -12,22 +12,7 @@ router.get('/:code/stats', async (req, res) => {
     res.render('stats', { title: 'Encurtador', link: link_inteiro, resultado: resultado });
 });
 
-router.get('/:code', async (req, res) => {
-    const code = req.params.code;
-    const link = await Link.findOne({ where: { code } });
-    if (!link) return res.sendStatus(404);
-
-    link.clicks++;
-    await link.save();
-
-    res.redirect(link.url);
-
-});
-
-router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Encurtador' });
-});
-
+router.get('/:code', controller.shortUrl);
 
 
 router.post('/new', controller.newUrl);
