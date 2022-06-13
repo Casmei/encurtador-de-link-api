@@ -1,5 +1,14 @@
 const Link = require('../models/Link');
 
+
+generateCode = () => {
+    let text = '';
+    let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for (let i = 0; i < 5; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+}
 exports.newUrl = function (req, res) {
     const url = req.body.url;
     if (!url) return res.json(400, { error: 'URL inválida' });
