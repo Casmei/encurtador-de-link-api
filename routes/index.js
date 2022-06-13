@@ -7,8 +7,6 @@ router.get('/:code/stats', controller.stats);
 
 router.get('/:code', controller.shortUrl);
 
-
 router.post('/new', controller.newUrl);
-
 
 module.exports = router;
