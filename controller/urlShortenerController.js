@@ -1,6 +1,5 @@
 const Link = require('../models/Link');
 
-
 generateCode = () => {
     let text = '';
     let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -34,4 +33,14 @@ exports.shortUrl = async (req, res) => {
 
     res.redirect(link.url);
 
+}
+
+exports.stats = async (req, res) => {
+    let code = req.params.code;
+    const resultado = await Link.findOne({ where: { code } });
+    if (!resultado) return res.json(404, { "msg": "Link inválido" });
+
+    const link_inteiro = `${process.env.DOMAIN}${resultado.code}`
+
+    res.json('200', { "url": link_inteiro, resultado });
 }
