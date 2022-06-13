@@ -23,3 +23,15 @@ exports.newUrl = async (req, res) => {
     const link_inteiro = `${process.env.DOMAIN}${resultado.code}`
     res.json(200, link_inteiro);
 }
+
+exports.shortUrl = async (req, res) => {
+    const code = req.params.code;
+    const link = await Link.findOne({ where: { code } });
+    if (!link) return res.json(400, { "msg": "Link inválido" });
+
+    link.clicks++;
+    await link.save();
+
+    res.redirect(link.url);
+
+}
