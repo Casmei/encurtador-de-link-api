@@ -34,4 +34,28 @@ uma gama de possibilidades que podem ser aproveitadas, sobretudo, na área de ma
     Status: 200 Ok
     
     render: https://algumsite/asdada/asdfasf/uXjVOtE0G08=/
+    
+## Status
+
+### Request
+
+`GET /:code/stats`
+
+    curl -i -H 'Accept: application/json' -d 'code:drqw2' http://localhost:3000/:code/stats
+
+### Response
+
+    Status: 200 Ok
+    
+    "url": "http://localhost:3000/drqw2",
+    "resultado": {
+        "id": 25,
+        "url": "https://algumsite/asdada/asdfasf/uXjVOtE0G08=/",
+        "code": "drqw2",
+        "clicks": 7,
+        "createdAt": "2022-06-19T19:25:39.232Z",
+        "updatedAt": "2022-06-19T19:26:20.824Z"
+    }
+    
+
 
