@@ -1,8 +1,17 @@
 # API - Encurtador de Links
 
 É muito comum que tenhamos contato, nas mais diversas aplicações, com URLs totalmente ilegíveis devido à quantidade de parâmetros passados.
+
 Os encurtadores são ferramentas simples: produzem um novo URL (curto) que irão redirecionar para a URL que deseja. Isso é básico, mas abre 
 uma gama de possibilidades que podem ser aproveitadas, sobretudo, na área de marketing.
+
+### Próximas atualizações
+
+- [ ] Dokerizar o Projeto
+- [ ] Criar o passo a passo de instalção
+- [ ] Aplicar testes
+
+# Documentação de uso
 
 ## Gerar Link encurtado
 
