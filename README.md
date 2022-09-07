@@ -1,70 +1,33 @@
-# API - Encurtador de Links
+<h1 align="center">Encurtador de Links</h1>
 
-É muito comum que tenhamos contato, nas mais diversas aplicações, com URLs totalmente ilegíveis devido à quantidade de parâmetros passados.
-
-Os encurtadores são ferramentas simples: produzem um novo URL (curto) que irão redirecionar para a URL que deseja. Isso é básico, mas abre 
-uma gama de possibilidades que podem ser aproveitadas, sobretudo, na área de marketing.
-
-### Próximas atualizações
-
-- [x] Dokerizar o Projeto
-- [ ] Criar o passo a passo de instalção
-- [ ] Aplicar testes
-
-# Documentação de uso
-
-## Gerar Link encurtado
-
-### Request
-
-`POST /new`
-
-    curl -i -H 'Accept: application/json' -d 'url:https://algumsite/asdada/asdfasf/uXjVOtE0G08=/' http://localhost:3000/new
-
-### Response
-
-    Status: 201 Created
-
-```json 
-     {
-       "link":"http://localhost:3000/drqw2"
-     }
-```    
-## Redirecionamento
-
-### Request
-
-`GET /:code`
-
-    curl -i -H 'Accept: application/json' -d 'code:drqw2' http://localhost:3000/:code
-
-### Response
-
-    Status: 200 Ok
-    
-    render: https://algumsite/asdada/asdfasf/uXjVOtE0G08=/
-    
-## Status
-
-### Request
-
-`GET /:code/stats`
-
-    curl -i -H 'Accept: application/json' -d 'code:drqw2' http://localhost:3000/:code/stats
-
-### Response
-
-    Status: 200 Ok
-    
-    "url": "http://localhost:3000/drqw2",
-    "resultado": {
-        "id": 25,
-        "url": "https://algumsite/asdada/asdfasf/uXjVOtE0G08=/",
-        "code": "drqw2",
-        "clicks": 7,
-        "createdAt": "2022-06-19T19:25:39.232Z",
-        "updatedAt": "2022-06-19T19:26:20.824Z"
-    }
-    
+### 🔖 Sobre
 
 
+O projeto consiste em uma api que futuramente será consumida por uma interface construida em react. Esta api tem como funcionalidade o encurtamento de links, além de encurtalos, ela também é capaz de mostrar informações desse link encurtado, como por exemplo a quantidade de acessos que ele teve bem como a url original a qual ele o redirecionara.
+
+---
+
+### 🏁 Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), e o [Docker](https://www.docker.com/)
+
+### 🎲 Rodando
+- Clone este repositório <br>
+```git clone https://github.com/Casmei/urlShortener.git```
+
+- Acesse a pasta do projeto no terminal/cmd <br>
+```cd urlShortener```
+- Verifique se a porta 3000 do seu computador esta livre
+- Inicialize o seu docker e rode o comando <br>```docker compose up --build```
+- Acesse <http://localhost:3000>
+
+---
+
+### 📄 Documentação
+
+Para entender o funcionamento da Api, desenvolvi uma documentação no postman, basta entra no link abaixo:
+- [Documentação](https://documenter.getpostman.com/view/20969540/VVBUx6TL)
+
+
+Feito com ❤️ e ☕ por Tiago de Castro 👋🏽 [Entre em contato!](https://www.linkedin.com/in/tiago-de-castro-lima-3814911b9/) <br>
+Este projeto esta sobe a licença [MIT](./LICENSE).
