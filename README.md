@@ -7,7 +7,7 @@ uma gama de possibilidades que podem ser aproveitadas, sobretudo, na área de ma
 
 ### Próximas atualizações
 
-- [ ] Dokerizar o Projeto
+- [x] Dokerizar o Projeto
 - [ ] Criar o passo a passo de instalção
 - [ ] Aplicar testes
 
