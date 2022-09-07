@@ -3,6 +3,8 @@ var router = express.Router();
 
 const controller = require('../controller/urlShortenerController');
 
+router.get('/', controller.index)
+
 router.get('/:code/stats', controller.stats);
 
 router.get('/:code', controller.shortUrl);
