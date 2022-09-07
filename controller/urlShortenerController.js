@@ -20,7 +20,7 @@ exports.newUrl = async (req, res) => {
     });
     if (!resultado) return res.json(500, { error: 'Erro ao criar o link' });
 
-    const link_inteiro = `${process.env.DOMAIN}${resultado.code}`
+    const link_inteiro = `${req.protocol + '://' + req.get('host')}/${resultado.code}`
     res.json(200, link_inteiro);
 }
 
@@ -41,7 +41,7 @@ exports.stats = async (req, res) => {
     const resultado = await Link.findOne({ where: { code } });
     if (!resultado) return res.json(404, { "msg": "Link inválido" });
 
-    const link_inteiro = `${process.env.DOMAIN}${resultado.code}`
+    const link_inteiro = `${req.protocol + '://' + req.get('host')}/${resultado.code}`
 
     res.json('200', { "url": link_inteiro, resultado });
 }
