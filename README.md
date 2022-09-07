@@ -9,7 +9,7 @@ O projeto consiste em uma api que futuramente será consumida por uma interface 
 
 ### 🏁 Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), e o [Docker](https://www.docker.com/)
+[Git](https://git-scm.com) e o [Docker](https://www.docker.com/).
 
 ### 🎲 Rodando
 - Clone este repositório <br>
