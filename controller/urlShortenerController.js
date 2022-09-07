@@ -9,6 +9,13 @@ generateCode = () => {
     return text;
 }
 
+exports.index = (req, res) => {
+    const message = {
+        message: "Congratulations, read the documentation!"
+    }
+    res.json(200, message)
+}
+
 exports.newUrl = async (req, res) => {
     const url = req.body.url;
     if (!url) return res.json(400, { error: 'URL inválida' });
