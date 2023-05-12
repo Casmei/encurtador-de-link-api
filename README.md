@@ -4,7 +4,7 @@
 
 
 O projeto consiste em uma api que futuramente será consumida por uma interface construida em react. Esta api tem como funcionalidade o encurtamento de links, além de encurtalos, ela também é capaz de mostrar informações desse link encurtado, como por exemplo a quantidade de acessos que ele teve bem como a url original a qual ele o redirecionara.
-
+ 
 ---
 
 ### 🏁 Pré-requisitos
